@@ -1,0 +1,13 @@
+#container input{
+    display: block;
+}
+
+input{
+    margin-top: 20px;
+}
+
+#NewUsd{
+    border: 1px solid black;
+    height: 20px;
+    width: 200px;
+}
