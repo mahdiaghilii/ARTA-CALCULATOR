@@ -10,12 +10,12 @@ fetch("https://api.nerkh.io/v1/prices/json/currency/USD", {
 
     let UsdValue = data.data.prices.USD.current
 
-      const NewUsd = document.getElementById('NewUsd')  //select new price
-      NewUsd.innerText = UsdValue+'   $'
+      const NewUsd = document.getElementById('NewUsd')       //select new price
+      NewUsd.innerText = 'Today Price:      '+UsdValue+'$'
 
       const OldPrice = document.getElementById('OldPrice')
       OldPrice.addEventListener('input' , (e)=>{
-            console.log(e.target.value)
+
       })
 
       const OldUsd = document.getElementById('OldUsd')
@@ -24,11 +24,17 @@ fetch("https://api.nerkh.io/v1/prices/json/currency/USD", {
       })
 
 
+      const Calculat = document.getElementById('Calculat')
+      Calculat.addEventListener('click' , (e)=>{
+        let finalPrice1 = Number(OldPrice.value/OldUsd.value*UsdValue)  //calculat new price
 
-      const NewPrice = document.getElementById('NewPrice')
-      NewPrice.innerText = Number(OldPrice)/Number(OldUsd)
+        let RoundPrice = Math.round(finalPrice1)
+        
+        NewPrice.innerText = 'تومان'+RoundPrice.toLocaleString("en-US")
+      })
 
-
+      const NewPrice = document.getElementById('NewPrice')              //select NewPrice
+    
 
 
 

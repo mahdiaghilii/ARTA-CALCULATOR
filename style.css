@@ -1,13 +1,70 @@
-#container input{
-    display: block;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-input{
-    margin-top: 20px;
+body{
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+#calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px 5px gray ;
+    padding: 10vh;
+    border-radius: 25px;
+    background: linear-gradient(90deg,rgba(190, 178, 235, 1) 0%, rgba(9, 9, 121, 1) 100%, rgba(0, 212, 255, 1) 100%);;
+}
+
+#calculator input{
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 250px;
+    border-radius: 15px;
+    border: 0;
 }
 
 #NewUsd{
-    border: 1px solid black;
-    height: 20px;
-    width: 200px;
+    width: 250px;
+    color: #fff;
+    text-align: center;
+    width: 250px;
+    margin: 40px 0 ;
+    border-bottom: 2px solid white;
+}
+
+#Calculat{
+    width: 250px;
+    color: #090979;
+    text-align: center;   
+    width: 180px;
+    border-radius: 15px;
+    margin-top: 120px;
+    background-color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#NewPrice{
+    width: 250px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 2px  solid white;
+    padding: 10px;
+    height: 50px;
 }
